@@ -1,144 +1,299 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Norveç Müzik Kültürü</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      background-color: #f4f4f9;
-      line-height: 1.8;
-    }
-
-    header {
-      background: linear-gradient(135deg, #3b82f6, #9333ea);
-      color: white;
-      text-align: center;
-      padding: 50px 20px;
-    }
-
-    section h2 {
-      color: #3b82f6;
-      border-bottom: 3px solid #3b82f6;
-      padding-bottom: 10px;
-      margin-bottom: 30px;
-    }
-
-    .card img {
-      height: 200px;
-      object-fit: cover;
-    }
-
-    footer {
-      background: #3b82f6;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Norveç Müziği</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                        url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMzQ0OTVlIi8+PC9zdmc+');
+            color: white;
+            padding: 150px 0;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .instrument-card {
+            transition: transform 0.3s;
+            margin-bottom: 20px;
+        }
+        .instrument-card:hover {
+            transform: translateY(-5px);
+        }
+        .nav-link {
+            color: #fff !important;
+        }
+        .instrument-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+        .timeline-item {
+            padding: 20px;
+            border-left: 3px solid #007bff;
+            margin-bottom: 20px;
+            background: #f8f9fa;
+        }
+        .section-divider {
+            height: 3px;
+            background: linear-gradient(to right, #007bff, #00ff88);
+            margin: 40px 0;
+        }
+        .festival-card {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+    </style>
 </head>
 <body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Norveç Müzikleri</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" href="#hakkinda">Hakkında</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#calgilar">Geleneksel Çalgılar</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#sanatcilar">Ünlü Sanatçılar</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#modern">Modern Müzik</a>
-          </li>
-        </ul>
-      </div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Norveç Müziği</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#geleneksel">Geleneksel Müzik</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#enstruman">Enstrümanlar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#modern">Modern Müzik</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#festivaller">Festivaller</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tarih">Tarihçe</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="container">
+            <h1>Norveç Müzik Kültürü</h1>
+            <p class="lead">Vikinglerden Günümüze: Bin Yıllık Müzikal Miras</p>
+        </div>
     </div>
-  </nav>
 
-  <!-- Header -->
-  <header>
-    <h1>Norveç'in Eşsiz Müzik Kültürü</h1>
-    <p>Gelenekten geleceğe uzanan melodilerin ülkesi Norveç’i keşfedin.</p>
-  </header>
-
-  <!-- Content -->
-  <main class="container my-5">
-    <!-- About Section -->
-    <section id="hakkinda" class="mb-5">
-      <h2>Norveç Müzikleri Hakkında</h2>
-      <p>Norveç, hem geleneksel hem de modern müzik sahnesiyle dikkat çeken bir ülkedir. Tarihi Viking şarkılarından günümüzün elektronik ve black metal sahnesine kadar, her dönem Norveç müziği kültür ve doğayla iç içe olmuştur. Norveç müziği, özellikle pastoral temalar, doğal güzellikler ve yerel mitolojilerle şekillenmiştir.</p>
-    </section>
-
-    <!-- Instruments Section -->
-    <section id="calgilar" class="mb-5">
-      <h2>Geleneksel Çalgılar</h2>
-      <div class="row">
-        <div class="col-md-4">
-          <div class="card">
-            <img src="https://source.unsplash.com/400x200/?violin,instrument" class="card-img-top" alt="Hardingfele">
-            <div class="card-body">
-              <h5 class="card-title">Hardingfele</h5>
-              <p>Hardingfele, Norveç’in geleneksel kemanı olarak bilinir ve dekoratif desenlerle süslenir. Özellikle halk danslarında ve düğünlerde önemli bir yer tutar.</p>
+    <!-- Geleneksel Müzik -->
+    <section id="geleneksel" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Geleneksel Norveç Müziği</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>Halk Müziği (Folkemusikk)</h4>
+                    <p>Norveç halk müziği, ülkenin zengin kültürel mirasının önemli bir parçasıdır. Dans müziği (slåtter), balladlar ve pastoral melodilerden oluşur. Bu müzik türü genellikle düğünlerde, festivallerde ve toplumsal kutlamalarda çalınır.</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Vokal Gelenekleri</h4>
+                    <p>Kveding (geleneksel şarkı söyleme) ve Kulning (çobanların hayvanları çağırmak için kullandığı vokal teknik) Norveç'in en önemli vokal geleneklerindendir. Kulning, özellikle dağlık bölgelerde uzun mesafelere ses iletmek için kullanılırdı.</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Dans Müziği</h4>
+                    <p>Halling, springar ve gangar gibi geleneksel dans türleri, Norveç halk müziğinin temel unsurlarıdır. Her bölgenin kendine özgü dans ritimleri ve stilleri vardır.</p>
+                </div>
             </div>
-          </div>
         </div>
-        <div class="col-md-4">
-          <div class="card">
-            <img src="https://source.unsplash.com/400x200/?folk-music,strings" class="card-img-top" alt="Langspil">
-            <div class="card-body">
-              <h5 class="card-title">Langspil</h5>
-              <p>Langspil, sade ama etkileyici bir halk çalgısıdır. Yalnızca birkaç telden oluşur ve pastoral melodileriyle bilinir.</p>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Enstrümanlar -->
+    <section id="enstruman" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Geleneksel Enstrümanlar</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card instrument-card">
+                        <div class="instrument-img" style="background: #ddd; height: 200px; display: flex; align-items: center; justify-content: center;">
+                            Hardanger Fiddle Görseli
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Hardanger Fiddle</h5>
+                            <p class="card-text">Norveç'in milli çalgısı olan bu keman benzeri enstrüman, normal kemandan farklı olarak sempati telleri içerir. Genellikle süslemeli bir şekilde yapılır ve özel akort sistemine sahiptir.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card instrument-card">
+                        <div class="instrument-img" style="background: #ddd; height: 200px; display: flex; align-items: center; justify-content: center;">
+                            Langeleik Görseli
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Langeleik</h5>
+                            <p class="card-text">Tek telli bir çalgı olan Langeleik, dulcimer ailesine aittir. Genellikle masa üzerine konularak çalınır ve geleneksel melodilerde kullanılır. 1600'lerden beri Norveç'te popülerdir.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card instrument-card">
+                        <div class="instrument-img" style="background: #ddd; height: 200px; display: flex; align-items: center; justify-content: center;">
+                            Bukkehorn Görseli
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Bukkehorn</h5>
+                            <p class="card-text">Keçi boynuzundan yapılan bu üflemeli çalgı, çobanlar tarafından kullanılırdı. Doğal harmoniklere dayanan ses sistemi vardır ve her enstrüman benzersiz bir ses üretir.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card">
-            <img src="https://source.unsplash.com/400x200/?horn,instrument" class="card-img-top" alt="Bukkehorn">
-            <div class="card-body">
-              <h5 class="card-title">Bukkehorn</h5>
-              <p>Bukkehorn, keçi boynuzundan yapılır ve eski Viking geleneklerinden günümüze kadar gelmiştir. Benzersiz bir doğa tınısı sunar.</p>
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <div class="card instrument-card">
+                        <div class="instrument-img" style="background: #ddd; height: 200px; display: flex; align-items: center; justify-content: center;">
+                            Lur Görseli
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Lur</h5>
+                            <p class="card-text">Viking döneminden kalma uzun üflemeli bir çalgıdır. Savaş borusu olarak da kullanılmıştır. Modern versiyonları hala yapılmaktadır.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card instrument-card">
+                        <div class="instrument-img" style="background: #ddd; height: 200px; display: flex; align-items: center; justify-content: center;">
+                            Willow Flute Görseli
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Willow Flute (Seljefløyte)</h5>
+                            <p class="card-text">Söğüt ağacından yapılan basit bir flüt türüdür. İlkbaharda söğüt kabuğundan yapılır ve geleneksel çoban müziğinde kullanılır.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card instrument-card">
+                        <div class="instrument-img" style="background: #ddd; height: 200px; display: flex; align-items: center; justify-content: center;">
+                            Munnharpe Görseli
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Munnharpe</h5>
+                            <p class="card-text">Ağız harpi olarak da bilinen bu küçük metal enstrüman, dudaklar arasında tutularak çalınır ve karakteristik bir ses üretir.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </section>
 
-    <!-- Famous Artists Section -->
-    <section id="sanatcilar" class="mb-5">
-      <h2>Ünlü Norveçli Sanatçılar</h2>
-      <p>Norveç, dünya çapında tanınan birçok müzisyene ev sahipliği yapmaktadır:</p>
-      <ul>
-        <li><strong>Edvard Grieg:</strong> Romantik dönem klasik müziğin büyük isimlerinden biri. "Peer Gynt Suite" eserleri hala popülerdir.</li>
-        <li><strong>A-ha:</strong> 1980'lerin efsanevi pop grubu. "Take On Me" şarkısı dünya çapında hit olmuştur.</li>
-        <li><strong>Kygo:</strong> Elektronik dans müziği sahnesinin yıldızlarından biri. Tropikal house türünün öncülerindendir.</li>
-        <li><strong>Röyksopp:</strong> Atmosferik elektronik müziğin ustaları. Albümleri birçok ödül kazanmıştır.</li>
-      </ul>
+    <div class="section-divider"></div>
+
+    <!-- Modern Müzik -->
+    <section id="modern" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Modern Norveç Müziği</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Black Metal</h4>
+                    <p>1980'lerde ortaya çıkan Norveç Black Metal sahnesinin öncü grupları:</p>
+                    <ul>
+                        <li>Mayhem</li>
+                        <li>Darkthrone</li>
+                        <li>Emperor</li>
+                        <li>Immortal</li>
+                    </ul>
+                    <p>Bu gruplar, dünya çapında metal müzik sahnesini derinden etkilemiştir.</p>
+                </div>
+                <div class="col-md-6">
+                    <h4>Elektronik ve Pop Müzik</h4>
+                    <p>Norveç'in modern müzik sahnesinde öne çıkan isimler ve türler:</p>
+                    <ul>
+                        <li>Röyksopp - Elektronik Müzik</li>
+                        <li>Aurora - Art Pop</li>
+                        <li>Kygo - Tropical House</li>
+                        <li>a-ha - Synthpop</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- Modern Music Section -->
-    <section id="modern" class="mb-5">
-      <h2>Modern Norveç Müzik Sahnesi</h2>
-      <p>Norveç’in modern müzik sahnesi çeşitlilikle doludur. Oslo ve Bergen gibi şehirler, genç yeteneklere sahne olanağı sunan birçok müzik festivaline ev sahipliği yapar. Øya Festivali ve Bergenfest, müzik severlerin buluşma noktasıdır. Elektronik müzik, indie rock ve black metal gibi türler dünya çapında büyük etki yaratmıştır.</p>
-      <img src="https://source.unsplash.com/1200x400/?music,festival" alt="Music Festival" class="img-fluid rounded">
+    <div class="section-divider"></div>
+
+    <!-- Festivaller -->
+    <section id="festivaller" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Önemli Müzik Festivalleri</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card festival-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Øya Festival</h5>
+                            <p class="card-text">Oslo'da düzenlenen ve Norveç'in en büyük müzik festivallerinden biri. Alternatif rock, elektronik ve pop müzik ağırlıklıdır.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card festival-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Førde Traditional and World Music Festival</h5>
+                            <p class="card-text">Geleneksel Norveç müziği ve dünya müziklerini bir araya getiren önemli bir festival.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card festival-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Inferno Metal Festival</h5>
+                            <p class="card-text">Oslo'da düzenlenen ve black metal ağırlıklı olan uluslararası metal müzik festivali.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-  </main>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2024 Samet Software. Tüm Hakları Saklıdır.</p>
-  </footer>
+    <div class="section-divider"></div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Tarihçe -->
+    <section id="tarih" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Norveç Müzik Tarihi</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h5>Viking Dönemi (793-1066)</h5>
+                    <p>Savaş şarkıları, skaldik şiir ve ilkel müzik aletlerinin kullanımı.</p>
+                </div>
+                <div class="timeline-item">
+                    <h5>Orta Çağ (1066-1500)</h5>
+                    <p>Kilise müziğinin gelişimi ve halk müziği geleneklerinin oluşması.</p>
+                </div>
+                <div class="timeline-item">
+                    <h5>17.-19. Yüzyıllar</h5>
+                    <p>Hardanger fiddle'ın gelişimi ve halk müziği derlemelerinin başlaması.</p>
+                </div>
+                <div class="timeline-item">
+                    <h5>20. Yüzyıl</h5>
+                    <p>Klasik müzik bestecileri Edvard Grieg ve modern müzik akımlarının ortaya çıkışı.</p>
+                </div>
+                <div class="timeline-item">
+                    <h5>Modern Dönem</h5>
+                    <p>Black metal, elektronik müzik ve pop müziğin yükselişi.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>&copy; 2024 Norveç Müzik Kültürü</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
