@@ -9,10 +9,11 @@
     body {
       font-family: 'Arial', sans-serif;
       line-height: 1.8;
+      background-color: #f8f9fa;
     }
 
     header {
-      background: linear-gradient(45deg, #1e90ff, #87cefa);
+      background: linear-gradient(135deg, #1e3a8a, #4ade80);
       color: white;
       text-align: center;
       padding: 60px 0;
@@ -30,8 +31,14 @@
       object-fit: cover;
     }
 
+    .modern-music img {
+      width: 100%;
+      border-radius: 15px;
+      margin-bottom: 20px;
+    }
+
     footer {
-      background: #333;
+      background: #1e3a8a;
       color: white;
       text-align: center;
       padding: 20px 0;
@@ -65,8 +72,8 @@
 
   <!-- Header -->
   <header>
-    <h1>Norveç'in Eşsiz Müzik Dünyası</h1>
-    <p>Geleneksel melodilerden modern sanatçılara, Norveç müziğini keşfetmek için harika bir fırsat.</p>
+    <h1>Norveç'in Zengin Müzik Kültürü</h1>
+    <p>Geleneksel çalgılardan elektronik müzik sahnesine kadar Norveç müziğini keşfedin.</p>
   </header>
 
   <!-- Main Content -->
@@ -74,7 +81,7 @@
     <!-- About Section -->
     <section id="hakkinda" class="mb-5">
       <h2>Norveç Müziği Hakkında</h2>
-      <p>Norveç müziği, Kuzey Avrupa’nın soğuk ve etkileyici doğasının ruhunu yansıtan ezgilerden oluşur. Geleneksel müzikler genellikle doğanın seslerinden ve mitolojik hikayelerden ilham alır. Bu müzikler, Sami halkının kültüründe derin izler bırakmıştır. Modern Norveç müziği ise dünyaca ünlü sanatçılar ve gruplarla her geçen gün daha da gelişmektedir.</p>
+      <p>Norveç müziği, benzersiz bir şekilde geçmiş ve geleceği harmanlar. Bu topraklarda doğan ezgiler, Viking mitolojisinin hikayelerini ve doğanın vahşi güzelliğini yansıtır. Norveç’in modern müziği ise kendine has atmosferik tarzıyla öne çıkar. Özellikle folk, elektronik, black metal ve indie pop türlerinde dünya çapında ün kazanmış sanatçılara ev sahipliği yapmaktadır.</p>
     </section>
 
     <!-- Instruments Section -->
@@ -86,7 +93,7 @@
             <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/FeleHel_%282%29.jpg" class="card-img-top" alt="Hardingfele">
             <div class="card-body">
               <h5 class="card-title">Hardingfele</h5>
-              <p class="card-text">Hardingfele, Norveç'in ünlü geleneksel kemanı olarak bilinir ve genellikle dekoratif desenlerle süslenir. Kendine özgü yankılı sesi ve karmaşık çalma teknikleri, bu enstrümanı benzersiz kılar. Hardingfele çalgısı, sıklıkla dans müziklerinde ve düğün törenlerinde kullanılır.</p>
+              <p class="card-text">Hardingfele, Norveç’in ruhunu taşıyan geleneksel bir yaylı çalgıdır. Bu çalgının benzersiz yankı sesi, dans müziklerinde ve yerel festivallerde sıkça duyulur. Hardingfele, sadece bir enstrüman değil; aynı zamanda kültürel bir mirastır.</p>
             </div>
           </div>
         </div>
@@ -95,7 +102,7 @@
             <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Langspil.jpg" class="card-img-top" alt="Langspil">
             <div class="card-body">
               <h5 class="card-title">Langspil</h5>
-              <p class="card-text">Langspil, Kuzey Avrupa'nın geleneksel yaylı çalgılarından biridir ve Norveç'in sakin melodilerini yansıtır. Minimalist bir yapıya sahip olan Langspil, genellikle tek tellidir ve geleneksel halk şarkılarında ritmik bir temel oluşturur.</p>
+              <p class="card-text">Langspil, melodik ve ritmik tınılarıyla bilinir. Halk müziğinin kalbinde yer alır ve genellikle sakin doğa temalı melodilerde kullanılır. Minimalist yapısıyla Norveç’in zarif doğasını simgeler.</p>
             </div>
           </div>
         </div>
@@ -104,7 +111,7 @@
             <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Bockhorn_-_SMV_-_X22_01.tif" class="card-img-top" alt="Bukkehorn">
             <div class="card-body">
               <h5 class="card-title">Bukkehorn</h5>
-              <p class="card-text">Bukkehorn, keçi boynuzundan yapılan eski bir Norveç çalgısıdır. Viking döneminden bu yana kullanılan Bukkehorn, pastoral bir ses üretir ve genellikle doğanın seslerini taklit etmek için kullanılır. Ayrıca, ritüel ve seremoni müziklerinde özel bir yere sahiptir.</p>
+              <p class="card-text">Bukkehorn, doğanın seslerini yankılayan eşsiz bir çalgıdır. Geleneksel olarak keçi boynuzundan yapılır ve Norveç folklorunda özel bir yere sahiptir. Eski dönemlerden modern ritimlere taşınmış bir gelenektir.</p>
             </div>
           </div>
         </div>
@@ -114,7 +121,10 @@
     <!-- Modern Music Section -->
     <section id="modern-muzik" class="mb-5">
       <h2>Modern Norveç Müziği</h2>
-      <p>Norveç müziği, sadece geleneksel melodilerle sınırlı kalmaz. Günümüzde elektronik müzik, metal ve pop türlerinde önemli bir yere sahiptir. A-ha, Röyksopp ve Aurora gibi sanatçılar, Norveç'in modern müzik sahnesini temsil eden önemli isimlerdir. Elektronik müzik gruplarından Röyksopp, melankolik ama enerjik bir tarz sunarken, Aurora’nın müziği modern popun büyülü bir yorumunu sunar.</p>
+      <div class="modern-music">
+        <img src="https://source.unsplash.com/1200x400/?concert,music" alt="Modern Music Scene">
+        <p>Norveç'in modern müzik sahnesi, dünya çapında yankı uyandıran elektronik müzik gruplarından black metal türünün öncülerine kadar geniş bir yelpazeye sahiptir. Röyksopp, Kygo gibi elektronik müzik sanatçıları, küresel listelerde yer edinmiştir. Ayrıca Norveç, her yıl Bergen ve Oslo gibi şehirlerde düzenlenen müzik festivalleriyle dikkat çeker. Ünlü "Øya Festivali", indie müzik tutkunlarının buluşma noktasıdır. Norveç, sadece geçmişiyle değil; aynı zamanda geleceği şekillendiren yenilikçi müzik sahnesiyle de öne çıkar.</p>
+      </div>
     </section>
   </main>
 
